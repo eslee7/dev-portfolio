@@ -84,8 +84,10 @@ $text: #74808a;
     ----------------------------
 */
 
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-size: 16px;
 
     &.active {
@@ -300,6 +302,11 @@ footer {
     border-radius: 30px;
     @include transition();
 
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 0.75s;
+
     &:hover {
         color: $base-color;
         background: #fff;
@@ -366,11 +373,16 @@ footer {
 
     h1, h2 {
         margin: 0;
+
+        animation-name: dropHeader;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+        animation-duration: 0.75s;
     }
 
     h1 {
         color: #fff;
-        font-weight: 900;
+        font-weight: bold;
         font-size: 5em;
         letter-spacing: 0.05em;
         line-height: 0.9em;
@@ -403,8 +415,13 @@ footer {
     width: 100%;
     text-align: center;
     z-index: 10;
-    bottom: 15px;
+    bottom: 40px;
     color: #fff;
+
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 0.75s;
 
     span {
         cursor: pointer;
@@ -447,6 +464,8 @@ footer {
 #about {
     padding: 75px 15px;
     border-bottom: 1px solid $border;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 
     h2 {
         color: $heading;
@@ -465,7 +484,7 @@ footer {
 */
 
 #experience {
-    padding: 50px 15px;
+    padding: 10vh 15px;
     text-align: center;
     border-bottom: 1px solid $border;
 
@@ -509,7 +528,7 @@ footer {
     background: #fff;
     border: 1px solid #e6e6e6;
     padding: 15px;
-    border-radius: 3px;
+    border-radius: 7px;
     text-align: left;
 
     h3 {
@@ -554,8 +573,8 @@ footer {
 
     i {
         display: block;
-        font-size: 2em;
-        margin-top: 10px;
+        font-size: 1.5em;
+        margin-top: 14px;
     }
 }
 
@@ -579,6 +598,8 @@ footer {
     padding: 50px 15px 20px 15px;
     border-bottom: 1px solid $border;
     text-align: center;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 
     h2 {
         color: $heading;
@@ -589,9 +610,14 @@ footer {
 .education-block {
     max-width: 700px;
     margin: 0 auto 30px auto;
-    padding: 15px;
-    border: 1px solid $border;
+    padding: 30px;
+    border-radius: 7px;
     text-align: left;
+
+    // Hide colored dots
+    position: relative;
+    background: $background-alt;
+    
 
     h3 {
         font-weight: 500;
@@ -630,7 +656,7 @@ footer {
 */
 
 #projects {
-    padding: 50px 15px;
+    padding: 10vh 15px;
     border-bottom: 1px solid $border;
     text-align: center;
 
@@ -646,7 +672,7 @@ footer {
     margin: 0 auto 30px auto;
     overflow: hidden;
     background: #fff;
-    border-radius: 4px;
+    border-radius: 7px;
 }
 
 .project-image {
@@ -674,6 +700,22 @@ footer {
     }
 }
 
+.btn-rounded-theme {
+    display: inline-block;
+    color:darken($background-alt, 26%);
+    padding: 10px 25px;
+    margin-top: 20px;
+    border: 3px solid darken($background-alt, 5%);
+    border-radius: 30px;
+    @include transition();
+
+    &:hover {
+        color: white;
+        background: darken($background-alt, 5%);
+        text-decoration: none;
+    }
+}
+
 .no-image {
     .project-info {
         position: relative;
@@ -694,7 +736,7 @@ footer {
 */
 
 #skills {
-    padding: 50px 15px;
+    padding: 10vh 15px;
     text-align: center;
 
     h2 {
@@ -714,11 +756,11 @@ footer {
         margin: 7px;
         padding: 5px 10px;
         color: $heading;
-        background: darken($background-alt, 5%);
+        background: #ffe2d6;
         list-style: none;
         cursor: default;
         font-size: 1.2em;
-        border-radius: 8px;
+        border-radius: 5px;
     }
 }
 
@@ -729,12 +771,11 @@ footer {
 */
 
 #contact {
-    padding: 50px 15px;
+    padding: 10vh 15px;
     background: $base-color;
     text-align: center;
 
     h2 {
-        margin: 0 0 15px 0;
         color: #fff;
         font-weight: 500;
     }
@@ -1028,7 +1069,7 @@ $bg-url: 'https://zephyo.github.io/22Days/code/11/graphics/Background.png';
 
 .frame, #wrap, html, body, .block-mobile {
   //position: absolute;
-  top: 0;
+  top: 0px;
   bottom: 0;
   left: 0;
   right: 0;
@@ -1040,8 +1081,8 @@ $bg-url: 'https://zephyo.github.io/22Days/code/11/graphics/Background.png';
 }
 
 body {
-  font-family: 'Mali', cursive;
-  background-image: url($bg-url);
+  //font-family: 'Mali', cursive;
+  //background-image: url($bg-url);
   background-size: auto 100%;
   background-repeat: repeat-x;
   background-position: center top;
