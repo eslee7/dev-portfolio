@@ -254,6 +254,14 @@ footer {
     padding: 50px 0;
 }
 
+#up-text {
+    text-align: center;
+    font-size: 14px;
+    color: $text;
+    position: relative;
+    bottom: -20px;
+}
+
 .copyright {
     padding-top: 20px;
 
@@ -793,7 +801,7 @@ footer {
 */
 
 #contact {
-    padding: 10vh 15px;
+    padding: 10vh 15px 15vh 15px;
     background: $base-color;
     text-align: center;
 
