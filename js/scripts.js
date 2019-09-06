@@ -160,7 +160,6 @@
 
         tiltx = (dy / cy);
         tilty = -(dx / cx);
-        console.log(tiltx + ', ' + tilty);
         radius = Math.sqrt(Math.pow(tiltx, 2) + Math.pow(tilty, 2));
         degree = (radius * 20);
         transform = 'scale(' + scale + ') rotate3d(' + -tiltx + ', ' + -tilty + ', 0, ' + degree + 'deg)';
@@ -230,8 +229,8 @@
 
             var range = 8;
 
-            var color = "background: hsla(" + hue + ",90%,60%,0.4);";
-            hue += 2;
+            var color = "background: hsla(" + hue + ",90%,60%,.9);";
+            hue += 1;
             if (hue > 360) {
                 hue = 0;
             }
@@ -246,6 +245,6 @@
             var style = left + top + color + size;
             $("<div class='ball' style='" + style + "'></div>").appendTo('#wrap').one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend", function () { $(this).remove(); });
         }
-    }, 60);
+    }, 30);
 
 })(jQuery);

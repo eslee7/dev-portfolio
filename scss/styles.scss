@@ -761,6 +761,11 @@ footer {
         cursor: default;
         font-size: 1.2em;
         border-radius: 5px;
+        transition: 0.3s;
+
+        &:hover {
+            background: darken(#ffe2d6, 10%);
+        }
     }
 }
 
@@ -1186,4 +1191,9 @@ body {
   align-items: center;
   justify-content: center;
   color: #c43a30;
+}
+
+#no-dots {
+    position: relative;
+    background: white;
 }
