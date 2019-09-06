@@ -616,11 +616,9 @@ footer {
 */
 
 #education {
-    padding: 50px 15px 20px 15px;
+    padding: 10vh 15px 15vh 15px;
     border-bottom: 1px solid $border;
     text-align: center;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
 
     h2 {
         color: $heading;
@@ -628,9 +626,13 @@ footer {
     }
 }
 
+#education-body {
+    display: flex;
+    justify-content: center;
+}
+
 .education-block {
     max-width: 700px;
-    margin: 0 auto 30px auto;
     padding: 30px;
     border-radius: 7px;
     text-align: left;
@@ -645,6 +647,7 @@ footer {
         float: left;
         margin: 0;
         color: $heading;
+        font-size: 1.5em;
     }
 
     span {
@@ -657,16 +660,26 @@ footer {
         clear: both;
         font-weight: 500;
         margin: 0 0 15px 0;
+        font-size: 1.1em;
     }
 
     p, ul {
         margin: 0;
         color: $text;
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     ul {
         padding: 0 0 0 15px;
+    }
+}
+
+#northwestern {
+    opacity: 0.7;
+    transition: 0.5s;
+
+    &:hover {
+        opacity: 1;
     }
 }
 
