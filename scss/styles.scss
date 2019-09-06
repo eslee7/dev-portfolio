@@ -183,7 +183,7 @@ header {
 
     a {
         display: block;
-        color: $base-color;
+        color: $base-color-hover;
         padding: 6px 10px;
 
         &:hover {
@@ -194,7 +194,7 @@ header {
         }
 
         &:focus {
-            color: $base-color;
+            color: $base-color-hover;
             text-decoration: none;
         }
     }
@@ -676,6 +676,11 @@ footer {
 
 #northwestern {
     opacity: 0.8;
+    transition: 1s;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 /*
@@ -707,6 +712,12 @@ footer {
 .project-image {
     float: left;
     cursor: pointer;
+    opacity: 0.8;
+    transition: 1s;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .project-info {
@@ -741,8 +752,9 @@ footer {
 
     &:hover {
         color: white;
-        background: lighten($base-color, 5%);
+        background: $base-color-hover;
         text-decoration: none;
+        border-color: $base-color-hover;
     }
 }
 
@@ -756,7 +768,8 @@ footer {
     @include transition();
 
     &:hover {
-        color: lighten($text, 5%);
+        color: white;
+        background-color: $base-color-hover;
         text-decoration: none;
     }
 }
@@ -819,7 +832,8 @@ footer {
 }
 
 #resume {
-    margin: 70px;
+    margin-top: 70px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
