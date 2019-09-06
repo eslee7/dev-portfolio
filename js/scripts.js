@@ -265,3 +265,12 @@
     }, 30);
 
 })(jQuery);
+
+function showMoreProjects() {
+    if (document.getElementById('project-section-two').style.display != "initial") {
+        document.getElementById('project-section-two').style.display = "initial";
+    } else if (document.getElementById('project-section-three').style.display != "initial") {
+        document.getElementById('project-section-three').style.display = "initial";
+        document.getElementById('projects-button').style.display = "none";
+    }
+}
