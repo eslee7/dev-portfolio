@@ -676,7 +676,7 @@ footer {
 
 #northwestern {
     opacity: 0.7;
-    transition: 0.5s;
+    transition: 1s;
 
     &:hover {
         opacity: 1;
@@ -703,7 +703,7 @@ footer {
 .project {
     position: relative;
     max-width: 900px;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 50px auto;
     overflow: hidden;
     background: #fff;
     border-radius: 7px;
@@ -711,14 +711,21 @@ footer {
 
 .project-image {
     float: left;
+    opacity: 0.8;
+    transition: 1s;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
 }
 
 .project-info {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    margin-left: 300px;
-    padding: 15px;
+    margin-left: 450px;
+    padding: 40px;
 
     h3 {
         font-size: 1.5em;
@@ -730,22 +737,22 @@ footer {
     p {
         color: $text;
         margin: 0 0 15px 0;
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }
 
 .btn-rounded-theme {
     display: inline-block;
-    color:darken($background-alt, 30%);
+    color: $base-color;
     padding: 10px 25px;
-    margin-top: 20px;
-    border: 3px solid darken($background-alt, 10%);
+    margin-top: 15px;
+    border: 3px solid lighten($base-color, 5%);
     border-radius: 30px;
     @include transition();
 
     &:hover {
         color: white;
-        background: darken($background-alt, 10%);
+        background: lighten($base-color, 5%);
         text-decoration: none;
     }
 }
@@ -782,19 +789,19 @@ footer {
         display: block;
         margin: 0 auto;
         padding: 0;
-        max-width: 600px;
+        max-width: 650px;
     }
 
     li {
         display: inline-block;
         margin: 7px;
-        padding: 5px 10px;
+        padding: 6px 12px;
         color: $heading;
         background: #ffe2d6;
         list-style: none;
         cursor: default;
         font-size: 1.2em;
-        border-radius: 5px;
+        border-radius: 7px;
         transition: 0.3s;
 
         &:hover {
@@ -804,7 +811,7 @@ footer {
 }
 
 #resume-padding {
-    height: 5vh;
+    height: 6vh;
 }
 
 /*
