@@ -707,6 +707,12 @@ footer {
     overflow: hidden;
     background: #fff;
     border-radius: 7px;
+
+    animation-name: dropHeader;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-duration: 0.75s;
+    transition: 0.5s;
 }
 
 .project-image {
