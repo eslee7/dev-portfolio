@@ -229,9 +229,9 @@
 
             var range = 8;
 
-            var color = "background: hsla(" + hue + ",90%,60%,.9);";
+            var color = "background: hsla(" + hue + ",90%,60%,.6);";
             hue += 1;
-            if (hue > 360) {
+            if (hue >  360) {
                 hue = 0;
             }
 
